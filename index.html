@@ -20,13 +20,13 @@
                 <span></span>
             </label>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#developer-detail">Developer Details</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#about-me" class="nav-link">About Me</a></li>
+                <li><a href="#developer-detail" class="nav-link">Developer Details</a></li>
             </ul>
         </div>
     </nav>
@@ -363,5 +363,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Close mobile menu when navigation link is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navToggle = document.getElementById('nav-toggle');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Uncheck the checkbox to close the menu
+                    navToggle.checked = false;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
